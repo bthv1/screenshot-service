@@ -16,7 +16,7 @@ const path = require('path');
   const page = await browser.newPage();
   await page.setViewport({ width: 1200, height: 800 });
 
-  const url = process.env.TARGET_URL || "https://example.com";
+  const url = process.env.TARGET_URL || "https://vert.eco";
   await page.goto(url, { waitUntil: 'networkidle2' });
 
   await page.screenshot({
