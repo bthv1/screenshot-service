@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: screenshot-service
+    env: node
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "node server.js"
+
+cronJobs:
+  - name: capture-screenshot
+    schedule: "*/10 * * * *"
+    command: "node index.js"
